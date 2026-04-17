@@ -1,0 +1,28 @@
+[Unit]
+Description=Sunba PTZ Autotrack
+Documentation=https://github.com/
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=autotrack
+Group=autotrack
+WorkingDirectory=/opt/sunba_autotrack
+ExecStart=/opt/sunba_autotrack/venv39/bin/python main.py --headless
+Restart=always
+RestartSec=10
+# Give the Coral USB time to enumerate after boot
+ExecStartPre=/bin/sleep 5
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=sunba-autotrack
+
+# Kill cleanly on stop
+KillSignal=SIGTERM
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target

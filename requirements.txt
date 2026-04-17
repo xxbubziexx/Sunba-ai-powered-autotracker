@@ -1,0 +1,23 @@
+# ── Runtime (Python 3.9) ──────────────────────────────────────────────────────
+opencv-python
+numpy<2.0
+ffpyplayer
+
+# ── Coral Edge TPU ────────────────────────────────────────────────────────────
+# Requires Python 3.9. Install wheels manually from:
+# https://github.com/google-coral/pycoral/releases/tag/v2.0.0
+#
+# Windows:
+#   pip install tflite_runtime-2.5.0.post1-cp39-cp39-win_amd64.whl
+#   pip install pycoral-2.0.0-cp39-cp39-win_amd64.whl
+#
+# Linux (x86_64):
+#   pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/tflite_runtime-2.5.0.post1-cp39-cp39-linux_x86_64.whl
+#   pip install https://github.com/google-coral/pycoral/releases/download/v2.0.0/pycoral-2.0.0-cp39-cp39-linux_x86_64.whl
+#
+# Also install the Edge TPU runtime library for your OS:
+#   https://coral.ai/docs/accelerator/get-started/
+
+# ── Training only (separate venv recommended) ─────────────────────────────────
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124 --no-cache-dir
+# pip install ultralytics
