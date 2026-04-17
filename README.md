@@ -1,4 +1,4 @@
-# Sunba Autotrack
+# Sunba PTZ Autotrack
 
 AI-powered PTZ autotracking for Sunba (XMEye/Sofia protocol) cameras using a Google Coral USB Accelerator.
 
